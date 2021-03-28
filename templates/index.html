@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/pages/style.css">
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+
+    <title>index</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-7">
+            <h2> COVID-19 statistics</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-5 order-last">
+
+            <select class="form-control" id="locality-dropdown" name="Status" placeholder="Select Here Please"></select>
+            <button type="submit" id="submit" class="btn btn-default">Submit</button>
+
+        </div>
+        <div class="col-xs-12 col-sm-7 order-first">
+
+            <div class="card">
+                <div class="card-header" role="tab" id="">
+                    <h3 class="mb-0">
+                        <a >
+                            <span id="location">select Country</span> <small> <span id="date"></span></small>
+                        </a>
+                    </h3>
+                </div>
+                <div>
+                    <div class="card-body">
+                        <div class="secondary-info">
+                            <p>
+                                total cases: <span id="total_cases">...</span>
+                            </p>
+                            <p>
+                                new cases: <span id="new_cases">...</span>
+                            </p>
+
+                            <p>
+                                new deaths <span id="new_deaths">...</span>
+                            </p>
+                            <p>
+                                total deaths <span id="total_deaths">...</span>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" role="tab" >
+                        <h4 class="mb-0">
+                            <a >
+                                <span>More Info</span>
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="collapse show"  data-parent="#accordion">
+                        <div class="card-body">
+                            <div id="more-info">
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="../static/js/bootstrap.js"></script>
+<script src="../static/js/bootstrap.esm.js"></script>
+<script src="../static/js/bootstrap.bundle.js"></script>
+<script src="../static/js/pages/reciveData.js"></script>
+
+</body>
+
+</html>

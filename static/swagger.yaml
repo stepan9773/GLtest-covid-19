@@ -1,0 +1,100 @@
+openapi: 3.0.0
+info:
+  title: Homework by Global Logic Covid - 19 API
+  description: >-
+    Optional multiline or single-line description in
+    [CommonMark](http://commonmark.org/help/) or HTML.
+  version: 0.1.9
+
+servers:
+  - url: '/'
+tags:
+  - name: location
+    description: "location details"
+paths:
+  /location:
+    get:
+      tags: 
+      - location
+      summary: Returns all countries
+      description: Returns all countries.
+      responses:
+        '200':
+          description: a JSON of countries
+          content:
+            application/json:
+              schema:
+                type: object
+
+        '404':
+          description: server not exist
+          content:
+            text/plain:
+              schema:
+                title: server not exist
+                type: string
+                example: server not exist
+      
+                
+ 
+
+  /location/{country_name}:
+    get:
+      tags: 
+      - location
+      parameters:
+        - name: country
+          in: path
+
+          description: contry name.
+          schema:
+            type: string
+            minimum: 1
+      responses:
+        '200':
+          description: a JSON of data per country
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: { }
+        '404':
+          description: Not found response
+          content:
+            text/plain:
+              schema:
+                title: server not found
+                type: string
+                example: Not found
+
+components:
+  schemas:
+
+    countries:
+      properties:
+        location:
+          type: array
+          items:
+            type: object
+            items:
+              type: string
+            properties:
+              id:
+                type: string
+
+
+ 
+    data:
+      properties:
+        data_field:
+          type: array
+          items:
+            type: object
+            items:
+              type: string
+            properties:
+              isert_number:
+                type: object
+          
+    
+        

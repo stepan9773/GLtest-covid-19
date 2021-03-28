@@ -1,1 +1,0 @@
-# GLtest-covid-19
